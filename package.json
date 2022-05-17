@@ -1,10 +1,10 @@
 {
-  "name": "sit725-2022-t1-pra7",
+  "name": "eRideStats",
   "version": "1.0.0",
   "description": "Practical 7 socket",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js;",
+    "start": "node server.js",
     "test": "mocha --reporter spec;"
   },
   "repository": {
