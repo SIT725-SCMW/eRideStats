@@ -1,3 +1,4 @@
+
 .navbar-size {
     width: 95%;
     margin: 0 auto;
@@ -7,16 +8,32 @@
     height: 56px;
     max-width: 4px 0;
 }
+
 .main-body {
-    background-color: #F28487;
-    columns: white;
+    background-color: #f2848800;
+    columns: rgba(255, 255, 255, 0);
     height: calc(100vh - 64px);
 }
+
 .materialboxed-image {
     margin: 0 auto;
     height: 400px;
 }
+
 .click-me-button {
     background-color: #ee6e73;
     margin-top: 50px;
 }
+
+.bg-img {
+    background-image: url("../images/background-image.jpg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.heading {
+    -webkit-text-stroke: 1px hsla(0, 0%, 0%, 0.597);
+}
+
