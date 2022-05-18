@@ -15,19 +15,96 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Custom Stylesheet-->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap-4-utilities.min.css">
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper navbar-size">
-            <a href="#" class="brand-logo"><img class="user-image-size" src="images/user-image.jpeg" /></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a target="_blank" href="https://www.linkedin.com/in/s-watha/">My LinkedIn</a></li>
-            </ul>
+    <!--------nav bar------>
+    <nav class="bg-primary">
+        <div class="container">
+        <div class="nav-wrapper">
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <a href="#" class="brand-logo"><img class="user-image-size" src="Erideimages/LogoMakr-0zUfwB.png" /></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html"> <i class="material-icons left">home</i> Home</a></li>
+            <li><a href="badges.html"> <i class="material-icons left">assignment_ind</i> About</a></li>
+            <li><a href="collapsible.html"> <i class="material-icons left">call_end </i> Contact Us</a></li>
+          </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
 
-    <main class="main-body">
+      <!----sidenav----->
+      <ul id="slide-out" class="sidenav">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="Erideimages/sidenav background.jpg">
+          </div>
+          <a href="#user"><img class="circle" src="Erideimages/eridesidenavlogo.png"></a>
+          <a href="#name"><span class="white-text email">ErideStats</span></a>
+        </div></li>
+        <li><a href="#!"><i class="material-icons">home</i>Home</a></li>
+        <li><a href="#!"><i class="material-icons">call_end</i>Contact Us</a></li>
+        <li><a href="#!"><i class="material-icons">assignment_ind</i>About</a></li>
+        <li><div class="divider"></div></li>
+        
+       
+      </ul>
+      
+
+      <!---end of side nav-->
+
+      <!-----nav bar end------>
+
+      <!---main section1----->
+      <section>
+    <div class="parallax-container center-align pt-5">
+        <div class="parallax"><img src="Erideimages/top section7.jpg"></div>
+        <div class="container">
+            <h2 class="white-text center-align mt-10"> Eride Stats</h2>
+            <p class="white-text center-align flow-text">Charging Made Eaiser and Efficient</p>
+            <b class="btn bg-primary">charge Now!</b>
+
+        </div>
+      </div>
+    </section>
+      <!---end of main section1---->
+
+      <!--section2-->
+      
+      <section>
+          <div class="container">
+              <h3 class="center-align">Methods of Charging</h3>
+              <div class="row mt-55">
+                  <div class="col s6">
+                      <div class="services container center-align">
+                        <i class="small  material-icons">battery_charging_full</i>
+                          <h3>DC Fast Charging</h3>
+                          <p>This is the fastest EV charging option available. 
+                        Currently DC Fast Chargers can provide up to 250 miles of range per hour with 50 to 125 miles of range chargeable in 15 minutes depending on the car and equipment.</p>
+
+                      </div>
+                  </div> 
+
+                  <div class="col s6">
+                    <div class="services container center-align">
+                        <i class=" small material-icons">battery_full</i>
+                          <h3>240-Volt Outlet</h3>
+                          <p>This is the most commonly available public charger. It usually gets around 25 miles of range per hour but can go as high as 60 miles of range per hour 
+                        depending on the car and equipment.</p>
+
+                      </div>  
+
+                </div>
+
+              </div>
+
+          </div>
+      </section>
+
+      <!--endofsection2--->
+
+       <!---previous practical unedited---  <main class="main-body">
         <div class="container">
             <div class="row">
                 <div class="col s12 center-align">
@@ -44,7 +121,7 @@
                 </div>
             </div>
             <!-- creating card section -->
-            <div class="row" id="card-section">
+              <!---koala card  <div class="row" id="card-section">
                 <div class="col s4 center-align">
                     <div class="card medium">
                         <div class="card-image waves-effect waves-block waves-light">
@@ -64,7 +141,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  -->
         <!-- Modal Structure -->
         <div id="modal1" class="modal modal-fixed-footer">
             <div class="row modal-content">
@@ -99,8 +176,9 @@
                 </form>
             </div>
         </div>
-    </main>
+    </main>  ---> 
 
+    
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -110,6 +188,17 @@
     
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/scripts.js"></script>
+
+    <script>
+        $(document).ready(function(){
+  $('.sidenav').sidenav({
+      edge:'right'
+  });
+     
+})
+$('.parallax').parallax();
+  </script>
+
 </body>
 <!-- end -->
 

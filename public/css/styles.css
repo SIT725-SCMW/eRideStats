@@ -1,3 +1,9 @@
+.bg-primary{
+    background:linear-gradient(to right,#ef32d9,#89fffd );
+}
+
+
+
 .navbar-size {
     width: 95%;
     margin: 0 auto;
