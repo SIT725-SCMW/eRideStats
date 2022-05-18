@@ -43,9 +43,26 @@
                             data-target="modal1"><i class="material-icons left">auto_fix_high</i>Click Me</a>
                     </div>
                 </div>
+
+                <!-- Google Map -->
+                <div id="googleMap" style="width:100%;height:400px;"></div>
+
+                <script>
+                function myMap() {
+                var mapProp= {
+                center:new google.maps.LatLng(-37.8445746,145.1104424),
+                zoom:15,
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                }
+                </script>
+
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_JIBs-ZtPMiYF4CFskEMefsYYrl8RUEE&callback=myMap"></script>
+
+                                
                 <!-- creating card section -->
                 <div class="row" id="card-section">
-                    <div class="col s4 center-align">
+                    <!-- <div class="col s4 center-align">
                         <div class="card medium">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator" src="images/kuala.jpeg">
@@ -62,7 +79,7 @@
                                 <p class="card-text">Hello There! I just wanted to say HI to you guys. See ya!</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!-- Modal Structure -->
