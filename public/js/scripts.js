@@ -38,15 +38,33 @@ const getProject = () => {
 
 const addCards = (items) => {
     items.forEach(item => {
-        let itemToAppend = '<div class="col s4 center-align">'+
-    '<div class="card medium"><div class="card-image waves-effect waves-block waves-light"><img class="activator" src="'+item.image+'">'+
-    '</div><div class="card-content">'+
-    '<span class="card-title activator grey-text text-darken-4">'+item.title+'<i class="material-icons right">more_vert</i></span><p><a href="#">'+item.link+'</a></p></div>'+
-    '<div class="card-reveal">'+
-        '<span class="card-title grey-text text-darken-4">'+item.title+'<i class="material-icons right">close</i></span>'+
-        '<p class="card-text grey-text text-darken-4">'+item.description+'</p>'+
-      '</div></div></div>';
-      $("#card-section").append(itemToAppend)
+        let itemToAppend = 
+    '<div class="col s4 center-align">'+
+    '<div class="card sticky-action medium">'+
+        '<div class="card-image waves-effect waves-block waves-light">'+
+            '<img class="activator" src="'+item.image+'">'+
+        '</div>'+
+        '<div class="card-content">'+
+            '<span class="card-title activator grey-text text-darken-4">'+item.title+'<i class="material-icons right">more_vert</i></span>'+
+            '<p><a href="#">'+item.link+'</a></p>'+
+        '</div>'+
+        '<div class="card-action">'+
+            '<a class="waves-effect waves-light btn light-blue modal-trigger" href="#modal2"><i class="large material-icons left">battery_unknown</i>Distance to KWH</a>'+
+            '<div id="modal2" class="modal">'+
+                '<div class="modal-content"><h4>Modal Header</h4><p>A bunch of text</p>'+
+                '</div>'
+                '<div class="modal-footer">'+
+                '<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>'+
+                '</div>'+
+            '</div>'
+        '</div>'+
+        '<div class="card-reveal">'+
+            '<span class="card-title grey-text text-darken-4">'+item.title+'<i class="material-icons right">close</i></span>'+
+            '<p class="card-text grey-text text-darken-4">'+item.description+'</p>'
+        '</div>'+
+    '</div>'+
+    '</div>';
+    $("#card-section").append(itemToAppend)
     });
 }
 let socket = io();
