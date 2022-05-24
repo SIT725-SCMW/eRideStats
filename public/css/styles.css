@@ -1,4 +1,8 @@
-
+.select-wrapper input.select-dropdown {
+    background-color: #f3f3f36b;
+    border: none;
+    border-bottom: 1px solid #000000;
+}
 .navbar-size {
     width: 95%;
     margin: 0 auto;
