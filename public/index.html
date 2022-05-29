@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
+    <title>eRideStats</title>
+    <!-- Meta Info -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eRideStats</title>
     <meta name="description" content="Electric vehicle charging station finder. Recharge by tasting Coffee. Avoid Long Driving Fatigue">
     <meta name="author" content="Shams Chunwai Muqeet Weiren>">
     <meta property="og:title" content="eRideStats">
     <meta property="og:type" content="website">
     <meta property="og:description" content="eRideStats Minimum Viable Product (MVP)">
     <link rel="icon" href="images/logo.png">
-
 
     <!-- Using Google's Materialize compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -81,14 +81,16 @@
             </div>
     </div>
 
-    <!-- modal click me button for registering email address to get notification with user's consent and compliance (which is optional and subject to change)
+
+
+    <!-- Display: modal2 click me button for registering email address to get notification with user's consent and compliance (which is optional and subject to change. Will not be displayed on front end)
     <div class="col s12 center-align">
-        <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i
-                class="material-icons left">auto_fix_high</i>email me for latest updates</a>
+        <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal2"><i
+                class="material-icons left">auto_fix_high</i>email me for latest updates please</a>
     </div> -->
 
-    <!-- Google's Materialize Modal Structure for User Email Input (optional and subject to compliance and change)-->
- <div id="modal2" class="modal modal-fixed-footer">
+    <!-- Using Google's Materialize Modal Structure for User to input Email address (optional, subject to compliance and subject to change)-->
+    <div id="modal2" class="modal modal-fixed-footer">
     <div class="row modal-content">
         <form class="col s12">
             <div class="row">
@@ -120,9 +122,15 @@
             </div>
         </form>
     </div>
-</div>
+    </div>
 
-    <!-- Google's Materialize Modal Structure for Pets' Collection Display-->
+    <!-- Display: modal1 click me button for addig field into pet collection which will not be displayed on front end) -->
+    <div class="col s12 center-align">
+        <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i
+                class="material-icons left">auto_fix_high</i>user generated content adding EV info on frontend</a>
+    </div>
+
+    <!-- Need modification: input fields onto Pet's Collection by using Google's Materialize Modal Structure
     <div id="modal1" class="modal modal-fixed-footer">
         <div class="row modal-content">
             <form class="col s12">
@@ -155,30 +163,33 @@
                 </div>
             </form>
         </div>
-    </div>
-
+    </div> -->
 
     </main>
 
-    <!-- Webpage footer section -->
+    <!-- footer after main -->
     <footer class="page-footer bg-primary mt-2 p-0.5 transparent">
         <div class="footer-copyright  light-blue" style="position:fixed;bottom:0;left:0;width:100%;">
             <div class="container">
+                <br><br>
                 © 2022 eRideStats - recharge by tasting Coffee - avoid driving fatigue - miniRoadTripAdvisor ©
                 <a class="grey-text text-lighten-4 right" href="#!"></a>
             </div>
         </div>
-    </footer><!-- end of footer -->
+    </footer>
     </div>
 
-    <!-- Compiled and minified JavaScript -->
+    <!-- Script: Using outsourced Jquery compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- Google's Materialize Compiled and minified JavaScript -->
+    
+    <!-- Script: Using outsouced Google's Materialize compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-
+    <!-- Script: Using outsouced socket.io.js -->
     <script src="/socket.io/socket.io.js"></script>
+
+    <!-- Script: Using scripts -->
     <script src="js/scripts.js"></script>
 
 </body>
