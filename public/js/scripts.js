@@ -1,8 +1,11 @@
+// Define function clickMe
 const clickMe = () => {
   alert("Thanks for clicking me. Hope you have a nice day!");
 };
 
+// Define function addProjectToApp
 const addProjectToApp = (project) => {
+  //ajax (Asynchronous JavaScript and XML, allowing data to be sent and received to and from a database / server)
   $.ajax({
     url: "/api/project",
     data: project,
@@ -14,6 +17,7 @@ const addProjectToApp = (project) => {
   });
 };
 
+// Define function submitForm
 const submitForm = () => {
   let formData = {};
   formData.title = $("#title").val();
@@ -35,6 +39,7 @@ const getProject = () => {
   });
 };
 
+// define function addCards
 const addCards = (items) => {
   items.forEach((item) => {
     let itemToAppend =
@@ -74,12 +79,15 @@ const addCards = (items) => {
     $("#card-section").append(itemToAppend);
   });
 };
+
+// Using socket.io
 let socket = io();
 
 socket.on("number", (msg) => {
   $("#heading").html("Welcome to SIT 725 Week 7: " + msg);
 });
 
+// jQuery, helps to load the page then execute the code
 $(document).ready(function () {
   $(".materialboxed").materialbox();
   $("#formSubmit").click(() => {
