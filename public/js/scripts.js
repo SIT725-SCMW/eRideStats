@@ -13,7 +13,7 @@ const addProjectToApp = (project) => {
     },
   });
 };
-
+let idVar=0;
 const submitForm = () => {
   let formData = {};
   formData.title = $("#title").val();
@@ -53,16 +53,6 @@ const addCards = (items) => {
       item.link +
       "</a></p>" +
       "</div>" +
-      '<div class="card-action">' +
-      '<a class="waves-effect waves-light btn light-blue modal-trigger" href="#modal2"><i class="large material-icons left">battery_unknown</i>Distance to KWH</a>' +
-      '<div id="modal2" class="modal">' +
-      '<div class="modal-content"><h4>Modal Header</h4><p>A bunch of text</p>' +
-      "</div>";
-    '<div class="modal-footer">' +
-      '<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>' +
-      "</div>" +
-      "</div>";
-    "</div>" +
       '<div class="card-reveal">' +
       '<span class="card-title grey-text text-darken-4">' +
       item.title +
