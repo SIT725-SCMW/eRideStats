@@ -5,6 +5,7 @@ const cors = require("cors");
 let dbConnect = require("./dbConnect");
 let projectRoute = require("./routes/projectRoute");
 let userRoute = require("./routes/userRoute");
+let locationRoute = require("./routes/locationRoute");
 let http = require('http').createServer(app);
 let io = require('socket.io')(http);
 
@@ -16,6 +17,7 @@ app.use(cors());
 
 app.use("/api/project", projectRoute);
 app.use("/api/user", userRoute);
+app.use("/api/location", locationRoute);
 
 const addTwoNumbers = (n1, n2) => {
     let num1 = parseInt(n1)

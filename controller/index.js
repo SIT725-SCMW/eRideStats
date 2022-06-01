@@ -1,4 +1,5 @@
 module.exports={
     projectController: require('./projectController'),
-    userController: require('./userController')
+    userController: require('./userController'),
+    locationController: require('./locationController')
 }

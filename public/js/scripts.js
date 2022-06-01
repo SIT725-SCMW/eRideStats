@@ -24,6 +24,7 @@ const submitForm = () => {
   console.log("Form Data Submitted: ", formData);
   addProjectToApp(formData);
 };
+
 const getProject = () => {
   $.get("/api/project", (response) => {
     if (response.statusCode == 200) {
@@ -34,6 +35,7 @@ const getProject = () => {
     }
   });
 };
+
 
 const addCards = (items) => {
   items.forEach((item) => {
@@ -64,6 +66,9 @@ const addCards = (items) => {
     $("#card-section").append(itemToAppend);
   });
 };
+
+
+
 let socket = io();
 
 socket.on("number", (msg) => {
@@ -77,5 +82,6 @@ $(document).ready(function () {
   });
   $("select").formSelect();
   getProject();
+  
   $(".modal").modal();
 });
