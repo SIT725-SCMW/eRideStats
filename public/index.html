@@ -31,7 +31,6 @@
                 </ul>
             </div>
         </nav>
-
         <main class="main-body">
             <div class="container">
                 <div class="heading row white-text">
@@ -42,15 +41,31 @@
                     <!----search bar--->
                     <div class="input-field col s12">
                         <select multiple>
-                          <option value="" disabled selected>Search for nearby charging stations</option>
-                          <option value="1">Coffee drive-thru</option>
-                          <option value="2">Fast Charger</option>
-                          <option value="3">lounge</option>
-                          <input type="submit" name="submit" id="submitBtn" class="btn">
+                            <option value="" disabled selected>Search for nearby charging stations</option>
+                            <option value="1">Coffee drive-thru</option>
+                            <option value="2">Fast Charger</option>
+                            <option value="3">lounge</option>
+                            <input type="submit" name="submit" id="submitBtn" class="btn">
                         </select>
                         <label></label>
-                      </div>
-                      <!--search bar end--->
+                    </div>
+                    <!--search bar end--->
+                    <!---button1-->
+                    <div class="center-align">
+                        <a class="waves-effect waves-light btn light-blue modal-trigger" href="#modal2">
+                            <i class="large material-icons left">battery_unknown</i>Distance to KWH Caculator
+                        </a>
+                        <div id="modal2" class="modal">
+                            <div class="modal-content">
+                                <h4>Modal Header</h4>
+                                <p>A bunch of text</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end button1-->
 
                 </div>
                 <!-- Google Map -->
@@ -67,25 +82,22 @@
                 </script>
 
                 <script
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_JIBs-ZtPMiYF4CFskEMefsYYrl8RUEE&callback=myMap">
-                    </script>
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_JIBs-ZtPMiYF4CFskEMefsYYrl8RUEE&callback=myMap"></script>
 
             </div>
 
             <!-- creating card section -->
             <div class="row" id="card-section">
             </div>
-    </div>
-   
-    <!-- modal click me button for adding more vehicles on front end-->
-    <div class="col s12 center-align">
-        <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i
-                class="material-icons left">auto_fix_high</i>Add more vehicles</a>
+
+        </main>
+
     </div>
 
-    </main>
+
     <!----footer section--->
     <footer class="page-footer bg-primary mt-2 p-0.5 transparent">
+
         <div class="footer-copyright  light-blue" style="position:fixed;bottom:0;left:0;width:100%;">
             <div class="container">
                 © 2022 ErideStats Copyright
@@ -94,7 +106,6 @@
         </div>
     </footer>
     <!---end of footer---->
-    </div>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
