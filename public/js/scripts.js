@@ -63,8 +63,11 @@ const addCards = (items) => {
       item.description +
       "</p>";
     "</div>" + "</div>" + "</div>";
+    let itemToAppend2='<label><input name="group1" type="radio" value='+item.link.substr(item.link.lastIndexOf("@")+1,3)+ '><span style="color:white;font-weight:bold;">'+item.title+'&nbsp&nbsp&nbsp</span></label>';
     $("#card-section").append(itemToAppend);
+    $("#car-options").append(itemToAppend2);
   });
+  $("#car-options").append('<label class="input-field inline text-white"><input placeholder="km" id="howmany" type="text" class="validate  text-white" maxlength="4" size="4"><span class="text-white" style="color:white;font-weight:bold;">&nbsp&nbsp&nbsp</span></label>');
 };
 
 
@@ -84,4 +87,5 @@ $(document).ready(function () {
   getProject();
   
   $(".modal").modal();
+  $('.dropdown-trigger').dropdown();
 });
