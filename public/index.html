@@ -51,20 +51,36 @@
                         
                     </div>
                     <!--search bar end--->
-                    <!---button1-->
-                    <div class="center-align">
-                        <a class="waves-effect waves-light btn light-blue modal-trigger" href="#modal2">
-                            <i class="large material-icons left">battery_unknown</i>Distance to KWH Caculator
-                        </a>
-                        <div id="modal2" class="modal">
-                            <div class="modal-content">
-                                <h4>Modal Header</h4>
-                                <p>A bunch of text</p>
+                     <!---button1-->
+                    <div class="center-align" style="background-color:#000000A9">
+                        <!-- Dropdown Trigger -->
+                        <form action="#" id="car-options1">
+                            <span id="car-options">
+                                <!-- <label>
+                                    <input name="group1" type="radio" checked />
+                                    <span>Red</span>
+                                </label>
+                                <label>
+                                    <input name="group1" type="radio" />
+                                    <span>Yellow</span>
+                                </label> -->
+                            </span>
+                            <span>&nbsp;&nbsp;&nbsp;</span>
+                            <a class="waves-effect waves-light btn light-blue modal-trigger" href="#modal2"
+                                onclick="calculate()">
+                                <i class="large material-icons left">battery_unknown</i>Caclculate WH
+                            </a>
+                            <div id="modal2" class="modal">
+                                <div class="modal-content">
+                                    <h4>The result is </h4>
+                                    <p id="calculation-result"></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
                             </div>
-                            <div class="modal-footer">
-                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-                            </div>
-                        </div>
+                        </form>
+
                     </div>
                     <!--end button1-->
 
@@ -119,6 +135,21 @@
                     }
                     window.initMap = initMap;
                     
+                </script>
+                <script>
+                    function calculate() {
+                        var rates = document.getElementsByName('group1');
+                        var rate_value;
+                        for (var i = 0; i < rates.length; i++) {
+                            if (rates[i].checked) {
+                                rate_value = parseInt(rates[i].value);
+                            }
+                        }
+                        parseInt(document.getElementById("howmany").value)*=rate_value;
+                        document.getElementById("calculation-result").innerText = rate_value;
+
+
+                    }
                 </script>
                 
             </div>
