@@ -82,6 +82,6 @@ $(document).ready(function () {
   });
   $("select").formSelect();
   getProject();
-  $('.dropdown-trigger').dropdown();
+  
   $(".modal").modal();
 });
