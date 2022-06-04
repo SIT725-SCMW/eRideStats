@@ -35,16 +35,16 @@
             <div class="container">
                 <div class="heading row white-text">
                     <div class="col s12 center-align">
-                        <h1>Charging Vehicles Made Easy and Efficient</h1>
+                        <h3>Your Road Trip Advisor</h3>
                         <h4 class="white-text">Our charging station finder for your convenience!</h4>
                     </div>
                     <!----search bar--->
                     <div class="input-field col s12">
                         <select multiple>
                             <option value="" disabled selected>Search for nearby charging stations</option>
-                            <option value="1">Coffee drive-thru</option>
+                            <option value="1">Grounded Coffee</option>
                             <option value="2">Fast Charger</option>
-                            <option value="3">lounge</option>
+                            <option value="3">Baby Changing Room</option>
                             <input type="submit" name="submit" id="submitBtn" class="btn">
                         </select>
                         <label></label>
@@ -58,8 +58,9 @@
                         </a>
                         <div id="modal2" class="modal">
                             <div class="modal-content">
-                                <h4>Modal Header</h4>
-                                <p>A bunch of text</p> <!--maths is cool-->
+                                <h4>Distance Calculator </h4>
+                                <p>distance= starting point latlng & destination latlng for drone or fast helicopter</p> 
+                                <!--https://maps.googleapis.com/maps/api/directions/json?origin=Burwood+Deakin+University&destination=Geelong+Deakin+University&key=AIzaSyC_JIBs-ZtPMiYF4CFskEMefsYYrl8RUEE--> <!--maths is cool-->
                             </div>
                             <div class="modal-footer">
                                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
@@ -80,7 +81,7 @@
                     
                     const myLatLng = { lat: -37.845824, lng: 145.114648 };
                     const map = new google.maps.Map(document.getElementById("googleMap"), {
-                        zoom: 7,
+                        zoom: 8,
                         center: myLatLng,
                     });
                     const icon = {
