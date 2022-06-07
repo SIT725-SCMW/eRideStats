@@ -1,7 +1,25 @@
 const clickMe = () => {
   alert("Thanks for clicking me. Hope you have a nice day!");
 };
-
+const retrieveLocation = () => {
+  $.get("/api/location", (response) => {
+    if (response.statusCode == 200) {
+      console.log(response);
+      addLocation(response.data);
+    } else {
+      console.log(response);
+    }
+  });
+};
+const addLocation = (items) => {
+ // let num = 0;
+  //let ostring = '<div class="input-field col s12"> <select> <option value="" disabled selected>Choose station</option>';  
+ // items.forEach((item) => {
+   // let itemToAppend= '<option value=' + (++num) + '>' + item.ev_station_name + '</option>';
+  //  ostring+=itemToAppend; itemToAppend
+ // });
+  //$("#options").append(ostring+'</select><label>Materialize Select</label></div>');
+};
 const addProjectToApp = (project) => {
   $.ajax({
     url: "/api/project",
@@ -13,7 +31,7 @@ const addProjectToApp = (project) => {
     },
   });
 };
-let idVar=0;
+let idVar = 0;
 const submitForm = () => {
   let formData = {};
   formData.title = $("#title").val();
@@ -76,12 +94,12 @@ socket.on("number", (msg) => {
 });
 
 $(document).ready(function () {
+  getProject();
+  retrieveLocation();
   $(".materialboxed").materialbox();
   $("#formSubmit").click(() => {
     submitForm();
   });
-  $("select").formSelect();
-  getProject();
-  
+  $('select').formSelect();
   $(".modal").modal();
 });
