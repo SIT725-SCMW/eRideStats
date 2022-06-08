@@ -12,14 +12,37 @@ const retrieveLocation = () => {
   });
 };
 const addLocation = (items) => {
- // let num = 0;
-  //let ostring = '<div class="input-field col s12"> <select> <option value="" disabled selected>Choose station</option>';  
- // items.forEach((item) => {
-   // let itemToAppend= '<option value=' + (++num) + '>' + item.ev_station_name + '</option>';
-  //  ostring+=itemToAppend; itemToAppend
- // });
-  //$("#options").append(ostring+'</select><label>Materialize Select</label></div>');
+  let num = 0;
+  let ostring = '<div class="input-field col s12"> <select name="distanceCoffee">';
+  items.forEach((item) => {
+    let coffee= item.coffee? "Has coffee!":"No coffee :(";
+    let itemToAppend = '<option value=' + (++num) + '>Distance is '+distance(item.ev_location.longitude,item.ev_location.latitude)+' m and '+coffee+'</option>';
+    ostring += itemToAppend; itemToAppend
+  });
+  $("#divCheckbox").append(ostring + '</select><label>Materialize Select</label></div>');
 };
+function distance(lon2, lat2) {
+  let lon1 = -37.84401; let lat1 = 145.11216;
+  lon1 = lon1 * Math.PI / 180;
+  lon2 = lon2 * Math.PI / 180;
+  lat1 = lat1 * Math.PI / 180;
+  lat2 = lat2 * Math.PI / 180;
+
+  // Haversine formula
+  let dlon = lon2 - lon1;
+  let dlat = lat2 - lat1;
+  let a = Math.pow(Math.sin(dlat / 2), 2)
+    + Math.cos(lat1) * Math.cos(lat2)
+    * Math.pow(Math.sin(dlon / 2), 2);
+
+  let c = 2 * Math.asin(Math.sqrt(a));
+
+  // Radius of earth in kilometers
+  let r = 6371;
+
+  // calculate the result
+  return Math.round(c * r);
+}
 const addProjectToApp = (project) => {
   $.ajax({
     url: "/api/project",
