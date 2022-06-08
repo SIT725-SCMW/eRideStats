@@ -41,7 +41,7 @@
                     <!--search bar-->
 
                     <div id="options">
-                        <select>
+                        <select onchange="disp(this)">
                             <option value="" disabled="" selected="">Choose station</option>
                             <option value="1">deakinCharge</option>
                             <option value="2">werribee</option>
@@ -60,12 +60,12 @@
                     <!--button1-->
                     <div class="center-align">
                         <a class="waves-effect waves-light btn light-blue modal-trigger" href="#modal2">
-                            <i class="large material-icons left">battery_unknown</i>Distance to KWH Caculator
+                            <i class="large material-icons left">directions_walk</i>Distance & Coffee Details
                         </a>
                         <div id="modal2" class="modal">
                             <div class="modal-content">
-                                <h4>Modal Header</h4>
-                                <p>A bunch of text</p>
+                                <h4>Results:</h4>
+                                <p id="result"></p>
                             </div>
                             <div class="modal-footer">
                                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
@@ -127,6 +127,14 @@
                     }
                     window.initMap = initMap;
 
+                </script>
+                <!-- Display Output-->
+                <script>
+                    function disp(a) {
+                        
+                        var x = document.getElementById("distanceCoffee").options[a.selectedIndex].label;
+                        document.getElementById("result").innerText=x;
+                    }
                 </script>
 
             </div>

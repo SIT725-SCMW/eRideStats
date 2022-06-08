@@ -13,7 +13,7 @@ const retrieveLocation = () => {
 };
 const addLocation = (items) => {
   let num = 0;
-  let ostring = '<div class="input-field col s12"> <select name="distanceCoffee">';
+  let ostring = '<div class="input-field col s12"> <select name="distanceCoffee" id="distanceCoffee">';
   items.forEach((item) => {
     let coffee= item.coffee? "Has coffee!":"No coffee :(";
     let itemToAppend = '<option value=' + (++num) + '>Distance is '+distance(item.ev_location.longitude,item.ev_location.latitude)+' m and '+coffee+'</option>';
