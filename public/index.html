@@ -43,13 +43,13 @@
                     <div id="options">
                         <select onchange="disp(this)">
                             <option value="" disabled="" selected="">Choose station</option>
-                            <option value="1">deakinCharge</option>
-                            <option value="2">werribee</option>
-                            <option value="3">avalon</option>
-                            <option value="4">apolloBay</option>
-                            <option value="5">warragul</option>
+                            <option value="1">Deakin Burwood Charge</option>
+                            <option value="2">Werribee</option>
+                            <option value="3">Avalon</option>
+                            <option value="4">ApolloBay</option>
+                            <option value="5">Warragul</option>
                             <option value="6">Malvern</option>
-                            <option value="7">glenWaverley</option>
+                            <option value="7">GlenWaverley</option>
                             <option value="8">Geelong</option>
                         </select>
                     </div>
@@ -88,7 +88,7 @@
 
                         const myLatLng = { lat: -37.845824, lng: 145.114648 };
                         const map = new google.maps.Map(document.getElementById("googleMap"), {
-                            zoom: 15,
+                            zoom: 7, // zoom level set to be 7
                             center: myLatLng,
                         });
                         const icon = {
