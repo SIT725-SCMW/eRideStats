@@ -6,7 +6,7 @@ eRideStats uses mongo database of EV charging stations. With a distance calculat
 
 How to use:
 - npm i node dependencies
-- npm run start to launch node.
+- npm run start // to launch node.
   
 Contributors:
 1. Shams
