@@ -5,7 +5,7 @@ Project title: eRideStats (web assistant for Electric Vehicle drivers)
 eRideStats uses mongo database of EV charging stations. With a distance calculator function. EV drivers can plan accessible road trip with their EVs.
 
 How to use:
-- npm i node <dependencies>
+- npm i node dependencies
 - npm run start to launch node.
   
 Contributors:
