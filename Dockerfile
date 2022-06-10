@@ -1,4 +1,5 @@
 FROM node:14-alpine
+# node:ubuntu:20.04 ->// # node:16 ->// # node:14-alpine (alpine linux is a minimized OS) for a reduced image size
 
 WORKDIR /app
 
